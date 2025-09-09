@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import { Box, CssBaseline, AppBar, Toolbar, Typography, Drawer, List, ListItem, ListItemIcon, ListItemText, ListItemButton, Divider } from '@mui/material';
 import { Dashboard, People, AccessTime, AccountCircle, Settings, Assessment, ExitToApp } from '@mui/icons-material';
@@ -30,9 +31,11 @@ const MainLayout = ({ children }) => {
       <CssBaseline />
       <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
         <Toolbar>
+          <Link to="/home" style={{ textDecoration: 'none', color: 'inherit' }}>
           <Typography variant="h6" noWrap component="div">
             E-Attendance System
           </Typography>
+          </Link>
         </Toolbar>
       </AppBar>
       <Drawer
